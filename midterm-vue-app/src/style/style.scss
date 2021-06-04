@@ -14,17 +14,23 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.header__picture {
+  display: none;
+}
 .header__logo {
   padding: 5px 7px;
   color: var(--dark);
   margin: auto 0;
+  display: none;
 }
 .header__nav__ul {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 .header__nav__ul__item {
+
   padding: 5px 7px;
   align-self: center;
   border-radius:8px;
@@ -74,4 +80,63 @@ body {
     background-color: var(--dark);
     transition: all 0.15s ease-out;
   };
+}
+@media screen and (min-width:425px){
+  .header__logo {
+    display: block; 
+  }
+}
+@media screen and (min-width:769px) {
+  .header__picture{
+    display: block;
+  }
+  
+}
+.cards__item {
+  background-color: #fff;
+  display: flex;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+  & div {
+    width: 100%;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.cards__item__button-delete {
+  border: none;
+  background-color: var(--red);
+  color: #F4F1DE;
+  padding:5px 7px;
+  border-radius:8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.cards__item__header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cards__addcard {
+  background-color: #fff;
+  display: flex;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.cards__addcard__button {
+  border: none;
+  padding:5px 7px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius:8px;
 }

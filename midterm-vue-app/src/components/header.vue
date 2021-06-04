@@ -5,7 +5,7 @@
           <source srcset="../../public/logo.png " type="image/png" media="(min-width:768px)">
           <img src="../../public/logo.png" height="60" width="60" alt="logo">
       </picture>
-    <span class="header__logo">My midterm exam. Web-tech's</span>
+    <span class="header__logo">My midterm exam.<br> Web-tech's</span>
       
     <nav class="header__nav">
       <ul class="header__nav__ul">

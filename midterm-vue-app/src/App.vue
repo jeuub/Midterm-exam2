@@ -1,16 +1,33 @@
 <template>
   <header_vue />
+  <list v-bind:items="items" v-model:categorys="categorys" />
   <footer_vue />
 </template>
 
 <script>
 import header_vue from '@/components/header'
 import footer_vue from '@/components/footer'
+import list from '@/components/list'
 export default {
   name: 'App',
   components: {
     header_vue,
-    footer_vue
+    footer_vue,
+    list
+  },
+  data(){
+    return {
+      categorys: [
+        {id: 1, name: 'metodologys'},
+        {id: 2, name: 'techs'},
+        {id: 3, name: 'new'}
+        ],
+      items: [
+        {id:1, title:'html', description:'asdasdasdasd', category:"metodologys", readed: true},
+        {id:2, title:'css', description:'asdasdasdasd', category:"techs", readed: true},
+        {id:3, title:'js', description:'asdasdasdasd', category:"new", readed: true}
+      ]
+    }
   }
 }
 </script>

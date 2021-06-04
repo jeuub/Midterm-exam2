@@ -1,10 +1,39 @@
 <template>
-  
+  <div class="cards">
+    <item v-for="item in items" :key="item" 
+    v-bind:item="item"
+    v-on:remove_item="remove_item"
+    />
+    <div class="cards__addcard">
+      <label>
+        Название
+        <input type="text">
+      </label>
+      <label>
+        содержание
+        <input type="text">
+      </label>
+      <select>
+        <option v-for="category in categorys" :key="category"> {{category.name}}</option>
+      </select>
+      <button class="cards__addcard__button">
+        добавить карточку
+      </button>
+    </div>
+  </div>
 </template>
 <script>
-export default {
-  setup() {
-    
-  },
-}
+  import item from '@/components/item';
+  export default {
+    props:['items', 'categorys'],
+    components:{
+      item 
+    },
+    methods: {
+      remove_item(id){
+        this.$emit('remove_item', id);
+      }
+    }
+  }
 </script>
+
