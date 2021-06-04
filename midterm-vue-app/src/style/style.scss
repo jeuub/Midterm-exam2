@@ -148,5 +148,10 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center ;
+  align-items:center;
+}
+.cards__item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

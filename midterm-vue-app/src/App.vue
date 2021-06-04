@@ -23,9 +23,9 @@ export default {
         {id: 3, name: 'new'}
         ],
       items: [
-        {id:1, title:'html', description:'asdasdasdasd', category:"metodologys", readed: false},
-        {id:2, title:'css', description:'asdasdasdasd', category:"techs", readed: false},
-        {id:3, title:'js', description:'asdasdasdasd', category:"new", readed: false}
+        {id:1, title:'bulma', description:'Bulma – отличная альтернатива Bootstrap с современным кодом и уникальной эстетикой. Инструментарий отличается простым синтаксисом, изобилует готовыми компонентами, к тому же его легко импортировать в проекты. Этот фреймворк сделает скучную веб-страницу яркой и привлекательной: более 40000 звезд на GitHub – важный показатель.', category:"metodologys", readed: false, src:''},
+        {id:2, title:'bootstrap', description:'Эту платформу создали в Twitter в 2011 году, чтобы сделать адаптивный дизайн доступным для разработчиков. С тех пор проект развился и предлагает бесчисленное множество функций для повышения производительности интерфейса.', category:"techs", readed: false, src:'https://getbootstrap.ru/docs/4.5/assets/brand/bootstrap-social.png'},
+        {id:3, title:'js', description:'asdasdasdasd', category:"new", readed: false, src:''}
       ]
     }
   },

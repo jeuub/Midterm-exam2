@@ -7,11 +7,11 @@
     <div class="cards__addcard">
       <form @submit.prevent="onSubmit">      
       <label>
-        Название
+        Название <br>
         <input type="text" v-model="card_title">
       </label>
       <label>
-        содержание
+        содержание<br>
         <input type="text" v-model="card_text">
       </label>
       <select>
@@ -51,7 +51,9 @@
           description: this.card_text,
           readed: false,
           }
-          this.$emit('addItem', newItem)
+          this.$emit('addItem', newItem);
+          this.card_title='',
+          this.card_text=''
         }
         
       }
