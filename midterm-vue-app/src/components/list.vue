@@ -5,20 +5,22 @@
     v-on:remove_item="remove_item"
     />
     <div class="cards__addcard">
+      <form @submit="onSubmit">      
       <label>
         Название
-        <input type="text">
+        <input type="text" v-model="card-title">
       </label>
       <label>
         содержание
-        <input type="text">
+        <input type="text" v-model="card-text">
       </label>
       <select>
         <option v-for="category in categorys" :key="category"> {{category.name}}</option>
       </select>
-      <button class="cards__addcard__button">
+      <button class="cards__addcard__button" type>
         добавить карточку
       </button>
+      </form>
     </div>
   </div>
 </template>
@@ -32,7 +34,8 @@
     methods: {
       remove_item(id){
         this.$emit('remove_item', id);
-      }
+      },
+      
     }
   }
 </script>

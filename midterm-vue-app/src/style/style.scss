@@ -4,10 +4,12 @@
   --dark: #3D405B;
   --green: #81B29A;
   --yellow: #F2CC8F;
+  font-size: 10px;
 }
 body {
   background-color: var(--white);
   transition: 300ms;
+  font-size: 1.6em;
 }
 
 .header {

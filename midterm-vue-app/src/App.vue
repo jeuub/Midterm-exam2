@@ -1,6 +1,6 @@
 <template>
   <header_vue />
-  <list v-bind:items="items" v-model:categorys="categorys" />
+  <list v-bind:items="items" v-model:categorys="categorys"  @remove_item="remove_item"/>
   <footer_vue />
 </template>
 
@@ -23,10 +23,16 @@ export default {
         {id: 3, name: 'new'}
         ],
       items: [
-        {id:1, title:'html', description:'asdasdasdasd', category:"metodologys", readed: true},
-        {id:2, title:'css', description:'asdasdasdasd', category:"techs", readed: true},
-        {id:3, title:'js', description:'asdasdasdasd', category:"new", readed: true}
+        {id:1, title:'html', description:'asdasdasdasd', category:"metodologys", readed: false},
+        {id:2, title:'css', description:'asdasdasdasd', category:"techs", readed: false},
+        {id:3, title:'js', description:'asdasdasdasd', category:"new", readed: false}
       ]
+    }
+  },
+    methods: {
+    remove_item(id){
+      console.log(id);
+      this.items = this.items.filter(t=> t.id !== id)
     }
   }
 }
