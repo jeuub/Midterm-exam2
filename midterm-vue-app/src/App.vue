@@ -1,6 +1,6 @@
 <template>
   <header_vue />
-  <list v-bind:items="items" v-model:categorys="categorys"  @remove_item="remove_item"/>
+  <list v-bind:items="items" v-model:categorys="categorys"  @remove_item="remove_item" @addItem="addItem"/>
   <footer_vue />
 </template>
 
@@ -33,6 +33,9 @@ export default {
     remove_item(id){
       console.log(id);
       this.items = this.items.filter(t=> t.id !== id)
+    },
+    addItem(item){
+      this.items.push(item);
     }
   }
 }

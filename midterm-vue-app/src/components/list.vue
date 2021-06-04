@@ -5,14 +5,14 @@
     v-on:remove_item="remove_item"
     />
     <div class="cards__addcard">
-      <form @submit="onSubmit">      
+      <form @submit.prevent="onSubmit">      
       <label>
         Название
-        <input type="text" v-model="card-title">
+        <input type="text" v-model="card_title">
       </label>
       <label>
         содержание
-        <input type="text" v-model="card-text">
+        <input type="text" v-model="card_text">
       </label>
       <select>
         <option v-for="category in categorys" :key="category"> {{category.name}}</option>
@@ -31,11 +31,30 @@
     components:{
       item 
     },
+    data(){
+      return{
+        card_title:'',
+        card_text:'',
+        
+      }
+    },
     methods: {
       remove_item(id){
         this.$emit('remove_item', id);
       },
-      
+      onSubmit(){
+
+        if (this.card_title.trim&&this.card_text){
+          const newItem = {
+          id: Date.now(),
+          title: this.card_title,
+          description: this.card_text,
+          readed: false,
+          }
+          this.$emit('addItem', newItem)
+        }
+        
+      }
     }
   }
 </script>
