@@ -8,6 +8,8 @@
 
 body {
   background-color: var(--white);
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .header {
@@ -22,9 +24,11 @@ body {
 .header__logo {
   padding: 5px 7px;
   color: var(--dark);
+  margin: auto 0;
 }
 
 .header__nav__ul {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +39,9 @@ body {
 
 .header__nav__ul__item {
   padding: 5px 7px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   border-radius: 8px;
 }
 
@@ -64,6 +71,9 @@ body {
 }
 
 .header__changetheme-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding: 5px 7px;
   border: 0;
   border-radius: 8px;
@@ -89,10 +99,5 @@ body {
   background-color: var(--dark);
   -webkit-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
-}
-
-.header__changetheme-btn::after {
-  background-color: var(--white);
-  left: 100%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,10 @@
 <template>
   <header class="header">
+    <picture class="header__picture">
+          <source srcset="../../public/logo.png " type="image/png" media="(min-width:1200px)">
+          <source srcset="../../public/logo.png " type="image/png" media="(min-width:768px)">
+          <img src="../../public/logo.png" height="60" width="60" alt="logo">
+      </picture>
     <span class="header__logo">My midterm exam. Web-tech's</span>
       
     <nav class="header__nav">
@@ -15,7 +20,9 @@
         </li>
       </ul>
     </nav>
+    <div style="display: flex">
     <button class="header__changetheme-btn" v-on:click="changeTheme">theme</button>
+    </div>
   </header>
 </template>
 <style Lang="scss">
